@@ -4,6 +4,10 @@ automato uses native LDAP libraries to automate the collection and enumeration o
 
 automato can also conduct password spraying attacks, and identify if a user is a local administrator against any number of systems.
 
+By adding the ability to cycle through a list of target servers we can do things like conduct password guessing against AD without tripping alarms. 
+
+If you provide automato credentails it will compare the users bad password count against the provided lockout threshold. 
+
 Output files are automatically created for evidence preservation.
 
 #### Usage
@@ -31,19 +35,3 @@ Commands:
 $
 ~~~
 
-I usually use the following command once domain user credentials have been obtained:
-~~~
-$ ruby automato.rb all
-~~~
-
-### General Use
-[![asciicast](https://asciinema.org/a/jZo3xL9gu6nOneluDWaH3ogdx.png)](https://asciinema.org/a/jZo3xL9gu6nOneluDWaH3ogdx)
-
-### Retrieve LAPS passwords
-[![asciicast](https://asciinema.org/a/aFsp8iQpzKcJSFieILMFskmdm.png)](https://asciinema.org/a/aFsp8iQpzKcJSFieILMFskmdm)
-
-### Password Spraying
-[![asciicast](https://asciinema.org/a/bGk28X36Hd60lBPvSw59sofe1.png)](https://asciinema.org/a/bGk28X36Hd60lBPvSw59sofe1)
-
-### Local Administrator Enumeration
-[![asciicast](https://asciinema.org/a/WZCZX2KQlAzSfJwipjQAo4kGl.png)](https://asciinema.org/a/WZCZX2KQlAzSfJwipjQAo4kGl)
